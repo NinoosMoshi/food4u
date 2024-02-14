@@ -1,5 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // login
+  let loginForm = document.querySelector('.login-form');
+
+  document.querySelector('#login-btn').onclick = () => {
+    loginForm.classList.toggle('active');
+  }
+
+  window.onscroll = () => {
+    loginForm.classList.remove('active');
+  }
+
+
+
+
+  // navbar toggle
   let toggleBtn = document.querySelector('.nav-toggler');
   let linksContainer = document.querySelector('.links-container');
 
@@ -54,3 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   AOS.init();
 });
+
+
+
+// ........................................
+
+
