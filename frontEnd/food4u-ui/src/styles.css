@@ -1833,12 +1833,13 @@ header .login-form p a {
 }
 
 
-@media (max-width: 1440px){
+@media (max-width: 2990px){
   .body {
     position: relative;
   }
 
   header .login-form {
+    top: 1.2%;
     right: -50%;
     width: 30%;
     font-size: 20px;
