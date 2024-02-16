@@ -1,0 +1,98 @@
+
+<section class="container forms">
+  <div class="form login">
+    <div class="form-content">
+      <!-- <header>Signup</header> -->
+      <form [formGroup]="signupForm">
+        <div class="field input-field">
+          <input id="name" [formControlName]="'name'" type="text" placeholder="Your Name" class="input">
+          <!-- start validation -->
+          <div class="validation-messages" *ngIf="signupForm.controls['name'].invalid && (signupForm.controls['name'].dirty || signupForm.controls['name'].touched)">
+            <div *ngIf="signupForm.controls['name'].errors?.['required']">
+              First name is required.
+            </div>
+            <div *ngIf="signupForm.controls['name'].errors?.['minlength']">
+              First name must be at least 3 characters long.
+            </div>
+          </div>
+          <!-- end validation -->
+        </div>
+
+        <!-- Add space here -->
+        <div class="spacer"></div>
+
+
+        <div class="field input-field">
+          <input id="email" [formControlName]="'email'" type="email" placeholder="Your Email" class="input validation-messages">
+          <!-- start validation -->
+          <div class="validation-messages" *ngIf="signupForm.controls['email'].invalid && (signupForm.controls['email'].dirty || signupForm.controls['email'].touched)">
+            <div *ngIf="signupForm.controls['email'].errors?.['required']">
+              Email is required.
+            </div>
+            <div *ngIf="signupForm.controls['email'].errors?.['email']">
+              Please enter a valid email address.
+            </div>
+          </div>
+          <!-- end validation -->
+        </div>
+
+        <div class="field input-field">
+          <input id="phone" [formControlName]="'phone'" type="text" placeholder="Your Phone Number" class="input">
+          <!-- start validation -->
+          <div class="validation-messages" *ngIf="signupForm.controls['phone'].invalid && (signupForm.controls['phone'].dirty || signupForm.controls['phone'].touched)">
+            <div *ngIf="signupForm.controls['phone'].errors?.['required']">
+              Phone Number is required.
+            </div>
+          </div>
+          <!-- end validation -->
+        </div>
+
+        <!-- Add space here -->
+        <div class="spacer"></div>
+
+        <div class="field input-field">
+          <input id="password" [formControlName]="'password'" type="password" placeholder="Your Password" class="input">
+          <!-- start validation -->
+          <div class="validation-messages" *ngIf="signupForm.get('password').invalid && (signupForm.get('password').dirty || signupForm.get('password').touched)">
+            <div *ngIf="signupForm.get('password').errors?.['required']">
+              Password is required.
+            </div>
+            <div *ngIf="signupForm.get('password').errors?.['minlength']">
+              Password must be at least 6 digit long.
+            </div>
+          </div>
+          <!-- end validation -->
+        </div>
+
+        <!-- Add space here -->
+        <div class="spacer"></div>
+
+        <div class="field input-field">
+          <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="Confirm password" class="password" [type]="passwordFieldType">
+          <i class='bx bx-hide eye-icon' (click)="togglePasswordVisibility()"></i>
+          <!-- start validation -->
+          <div class="validation-messages" *ngIf="signupForm.get('confirmPassword').invalid && (signupForm.get('confirmPassword').dirty || signupForm.get('confirmPassword').touched)">
+            <div *ngIf="signupForm.get('confirmPassword').errors?.['required']">
+              Confirm Password is required.
+            </div>
+            <div *ngIf="signupForm.get('confirmPassword').errors?.['confirm']">
+              Passwords do not match.
+            </div>
+          </div>
+          <!-- end validation -->
+        </div>
+
+        <!-- Add space here -->
+        <div class="spacer"></div>
+
+        <div class="field button-field">
+          <button [disabled]="!signupForm.valid" (click)="register()">Signup</button>
+        </div>
+      </form>
+
+      <div class="form-link">
+        <span>Already have an account? <a routerLink="/login" class="link login-link">Login</a></span>
+      </div>
+    </div>
+  </div>
+</section>
