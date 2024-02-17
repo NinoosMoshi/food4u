@@ -1939,12 +1939,9 @@ form{
 .field button{
   color: #fff;
   background-color: #0171d3;
+  outline: none;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-
-.field button:hover{
-background-color: var(--main-color);
 }
 
 
@@ -1999,5 +1996,7 @@ background-color: var(--main-color);
 /* end login and signup */
 
 
-
+h2.title{
+ text-align: center;
+}
 
