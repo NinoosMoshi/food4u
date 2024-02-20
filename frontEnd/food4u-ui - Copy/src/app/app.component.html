@@ -1,0 +1,170 @@
+<header *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- logo -->
+    <img src="assets/images/img/logo.png" class="logo" alt="" />
+
+    <!-- links -->
+    <ul class="links-container">
+      <li class="link-items"><a href="#" class="links">menu</a></li>
+      <li class="link-items"><a href="#" class="links">order</a></li>
+      <li class="link-items"><a href="#" class="links">restaurants</a></li>
+      <li class="link-items"><a href="#" class="links">track order</a></li>
+    </ul>
+
+    <div class="nav-extras">
+      <!-- search box -->
+      <div class="icons">
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+
+      <!-- <div class="search">
+            <input type="text" class="search-box" placeholder="Search Restaurants, Cuisine.....">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div> -->
+
+      <!-- cart icon -->
+      <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+      <div class="nav-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!--login form-->
+  <ul class="login-form">
+    <li class="profile-dropdown-list-item">
+      <a href="#" routerLink="/login">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Log-in
+      </a>
+    </li>
+    <hr />
+    <li class="profile-dropdown-list-item">
+      <a href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log-out
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+<header *ngIf="isAdminLoggedIn">
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- logo -->
+    <img src="assets/images/img/logo.png" class="logo" alt="" />
+
+    <!-- links -->
+    <ul class="links-container">
+      <li class="link-items"><a href="#" class="links">Add</a></li>
+      <!-- <li class="link-items"><a href="#" class="links">order</a></li>
+      <li class="link-items"><a href="#" class="links">restaurants</a></li>
+      <li class="link-items"><a href="#" class="links">track order</a></li> -->
+    </ul>
+
+    <div class="nav-extras">
+      <!-- search box -->
+      <div class="icons">
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+
+      <!-- <div class="search">
+            <input type="text" class="search-box" placeholder="Search Restaurants, Cuisine.....">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div> -->
+
+      <!-- cart icon -->
+      <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+      <div class="nav-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!--login form-->
+  <ul class="login-form">
+    <!-- <li class="profile-dropdown-list-item">
+      <a href="#" routerLink="/login">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Log-in
+      </a>
+    </li>
+    <hr /> -->
+    <li class="profile-dropdown-list-item">
+      <a href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log-out
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+<header *ngIf="isCustomerLoggedIn">
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- logo -->
+    <img src="assets/images/img/logo.png" class="logo" alt="" />
+
+    <!-- links -->
+    <ul class="links-container">
+      <li class="link-items"><a href="#" class="links" routerLink="/customer/dashboard">Customer dashboard</a></li>
+      <li class="link-items"><a href="#" class="links" routerLink="/customer/menu">Menu</a></li>
+      <!-- <li class="link-items"><a href="#" class="links">restaurants</a></li> -->
+      <!-- <li class="link-items"><a href="#" class="links">track order</a></li> -->
+    </ul>
+
+    <div class="nav-extras">
+
+      <!-- search box -->
+      <div class="icons">
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+
+       <!-- cart icon -->
+       <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+       <div class="search">
+        <input type="text" class="search-box" placeholder="Search Restaurants, Cuisine.....">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="nav-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--login form-->
+  <ul class="login-form">
+    <!-- <li class="profile-dropdown-list-item">
+      <a href="#" routerLink="/login">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Log-in
+      </a>
+    </li>
+    <hr /> -->
+    <li class="profile-dropdown-list-item">
+      <a href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log-out
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+
+
+<router-outlet></router-outlet>

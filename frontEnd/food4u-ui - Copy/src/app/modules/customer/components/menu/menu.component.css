@@ -1,0 +1,160 @@
+
+#menu {
+  display: flex;
+}
+
+.menu-header {
+  display: flex;
+  width: 100%;
+}
+
+.menu-header a {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  color: #227c70;
+  font-weight: 800;
+}
+
+.menu-header a:hover {
+  cursor: pointer;
+  background-color: #92efe1;
+  transition: .5s;
+}
+
+
+
+
+
+
+
+
+.wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.wrapper .card-menu {
+  width: 23%;
+  /* width: 350px; */
+  /* height: 520px; */
+  height: 30%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-image{
+  position: relative;
+}
+
+.food-rate{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background: #fe9920;
+  padding: 0.4rem 1.5rem;
+  font-size: .9rem;
+}
+
+
+.wrapper .card-menu .food-image img {
+  width: 100%;
+  display: block;
+  border-radius: 7px 7px 0 0;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+}
+
+.food-content {
+  padding: 1.6rem;
+}
+
+.food-content .content-para{
+  padding: 1.2rem 0;
+  font-size: .9rem;
+  color: gray;
+}
+
+.food-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-info div{
+  display: flex;
+  align-items: center;
+  color: #fa7921;
+}
+.food-info div p{
+  padding-left: 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.food-info span{
+  background: #fa7921;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 0.1rem 0.8rem;
+  font-weight: 600;
+}
+
+
+
+.food-price-calc{
+  padding: 1.5rem 0 0.6rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.food-price-calc h2{
+  color: #fa7921;
+  font-size: 1.7rem;
+}
+.food-quantity{
+  display: flex;
+  align-items: center;
+}
+
+.food-quantity div{
+  width: 30px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-val{
+  font-weight: 600;
+  background: #f9f9f9;
+}
+
+.order-dec,
+.order-inc{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.order-dec .fas,
+.order-inc .fas{
+  color: #fff;
+}
+
+.order-dec:hover,
+.order-inc:hover{
+  background: #fa7921;
+}
+
